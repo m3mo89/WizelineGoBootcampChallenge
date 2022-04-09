@@ -16,4 +16,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.MapGet("/helloWorld", () => "Hello World!")
+.WithName("GetHelloWorld");
+
 app.Run();
