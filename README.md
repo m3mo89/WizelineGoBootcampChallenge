@@ -25,4 +25,4 @@ Open and Run the project using Visual Studio Code:
 - Press Ctrl+F5.
 - Press Ctrl+F5.
 
-In a browser, navigate to https://localhost:<port>/swagger, where <port> is the randomly chosen port number displayed in the output.
+In a browser, navigate to ```https://localhost:<<port>>/swagger```, where ```<<port>>``` is the randomly chosen port number displayed in the output.
