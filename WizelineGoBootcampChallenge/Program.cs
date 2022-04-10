@@ -7,6 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddScoped<IRequestService, RequestService>();
 builder.Services.AddScoped<IMoviesService, MoviesService>();
 
+builder.Services.AddControllers();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -22,15 +24,9 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.MapControllers();
+
 app.MapGet("/helloWorld", () => "Hello World!")
 .WithName("GetHelloWorld");
-
-app.MapGet("/movies", async (IMoviesService moviesService) =>
-{
-    var remoteData = await moviesService.GetTopRatedAsync();
-
-    return remoteData.Results;
-})
-.WithName("GetMovies");
 
 app.Run();
