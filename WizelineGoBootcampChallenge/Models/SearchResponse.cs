@@ -6,15 +6,15 @@ namespace WizelineGoBootcampChallenge.Models
     public class SearchResponse<T>
     {
         [DataMember(Name = "results")]
-        public IReadOnlyList<T>? Results { get; private set; }
+        public IReadOnlyList<T>? Results { get; set; }
 
         [DataMember(Name = "page")]
-        public int PageNumber { get; private set; }
+        public int PageNumber { get; set; }
 
         [DataMember(Name = "total_pages")]
-        public int TotalPages { get; private set; }
+        public int TotalPages { get; set; }
 
         [DataMember(Name = "total_results")]
-        public int TotalResults { get; private set; }
+        public int TotalResults { get; set; }
     }
 }
