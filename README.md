@@ -22,7 +22,8 @@ Open and Run the project using Visual Studio Code:
 - Press Ctrl+F5.
 - At the Select environment prompt, choose .NET Core.
 - Select Add Configuration > .NET: Launch a local .NET Core Console App.
-- Press Ctrl+F5.
+- In the configuration JSON:
+  - Replace ```<<target-framework>>``` with ```net6.0```.
 - Press Ctrl+F5.
 
 In a browser, navigate to ```https://localhost:<<port>>/swagger```, where ```<<port>>``` is the randomly chosen port number displayed in the output.
